@@ -334,3 +334,9 @@ auto/*
 #*Notes.bib
 
 CV_ispitna_pitanja.pdf
+## cvlab (prakticni_primeri)
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+prakticni_primeri/out/

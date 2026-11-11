@@ -1,0 +1,32 @@
+[project]
+name = "cvlab"
+version = "0.1.0"
+description = "Practical examples for computer-vision oral exam questions (lib + CLI + GUI)"
+authors = [{ name = "mikelandjelos" }]
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "numpy>=2.0",
+    "opencv-python>=4.9",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+gui = ["pyside6>=6.7"]
+
+[project.scripts]
+cvlab = "cvlab.cli:main"
+cvlab-gui = "cvlab.gui:main"
+
+[tool.poetry]
+packages = [{ include = "cvlab" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
